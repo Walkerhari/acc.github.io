@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('rtm.html')
+    return render_template('RTMS1.html')
 
 @app.route('/run_python_script', methods=['POST'])
 def run_python_script():

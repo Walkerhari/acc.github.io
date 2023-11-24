@@ -19,10 +19,6 @@
 
     <script>
         function runPythonScript() {
-            // Add code here to run the main.py file
-            // You can use AJAX or other methods to execute the Python script
-
-            // For simplicity, this example uses fetch API to make an AJAX request
             fetch('/run_python_script', { method: 'POST' })
                 .then(response => {
                     if (!response.ok) {

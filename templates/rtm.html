@@ -3,31 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Signup Page</title>
     <link rel="stylesheet" href="style8.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container">
-        <div class="border">
-            <h2>Sign in to your <br>account</h2>
-            <form action="main.py" method="post" onsubmit="return validateForm()">
-                <div class="form-group">
-                    <input type="text" id="username" name="username" placeholder="Username or Email" required>
-                    <span class="error-message" id="username-error"></span>
-                </div>
-                <div class="form-group">
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                    <span class="error-message" id="password-error"></span>
-                </div>
-                <div class="btn-box">
-                    <a href="http://127.0.0.1:5000">Sign in</a>
-                </div>
-            </form>
-        </div>
-        <div class="signup-link">
-            Don't have an account? <a href="RTMS2.html">Sign up</a>
-        </div>
+    <div class="form-group">
+        <a href="http://127.0.0.1:5000">sign in</a>
+    </div>
+        </form>
     </div>
     <div class="home-sci">
         <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -37,7 +21,6 @@
     <footer class="footer">
         <p>&copy; 2023 RealTime Accident Monitoring. All rights reserved.</p>
     </footer>
-
     <script>
         function validateForm() {
             var username = document.getElementById('username').value;
@@ -57,5 +40,7 @@
             return true; 
         }
     </script>
+    
+
 </body>
 </html>

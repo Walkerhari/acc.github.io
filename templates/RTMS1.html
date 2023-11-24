@@ -11,7 +11,7 @@
     <div class="container">
         <div class="border">
             <h2>Sign in to your <br>account</h2>
-            <form action="/run_python_script" method="post" onsubmit="return validateForm()">
+            <form action="your_server_script.php" method="post" onsubmit="return validateForm()">
                 <div class="form-group">
                     <input type="text" id="username" name="username" placeholder="Username or Email" required>
                     <span class="error-message" id="username-error"></span>
@@ -20,8 +20,8 @@
                     <input type="password" id="password" name="password" placeholder="Password" required>
                     <span class="error-message" id="password-error"></span>
                 </div>
-                <div class="form-group">
-                    <button type="submit">Sign In--></button>
+                <div class="btn-box">
+                    <a href="http://127.0.0.1:5000">Sign in</a>
                 </div>
             </form>
         </div>

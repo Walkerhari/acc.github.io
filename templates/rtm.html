@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="style8.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="form-group">
+        <a href="http://127.0.0.1:5000">sign in</a>
+    </div>
+        </form>
+    </div>
+    <div class="home-sci">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 RealTime Accident Monitoring. All rights reserved.</p>
+    </footer>
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var usernameError = document.getElementById('username-error');
+            var passwordError = document.getElementById('password-error');
+            usernameError.textContent = '';
+            passwordError.textContent = '';
+            if (username.trim() === '') {
+                usernameError.textContent = 'Please fill out this field.';
+                return false;
+            }
+            if (password.trim() === '') {
+                passwordError.textContent = 'Please fill out this field.';
+                return false;
+            }
+            return true; 
+        }
+    </script>
+    
+
+</body>
+</html>

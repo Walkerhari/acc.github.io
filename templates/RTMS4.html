@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTMS4 Page</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <div class="container">
+        <div class="border">
+            <h2>Welcome to RTMS4</h2>
+            <button onclick="runPythonScript()">Run Python Script</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 RealTime Accident Monitoring. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function runPythonScript() {
+            // Add code here to run the main.py file
+            // You can use AJAX or other methods to execute the Python script
+
+            // For simplicity, this example uses fetch API to make an AJAX request
+            fetch('/run_python_script', { method: 'POST' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(result => {
+                    // Handle the result from the server
+                    alert(result.output);
+                })
+                .catch(error => {
+                    // Handle errors
+                    alert('Error: ' + error.message);
+                });
+        }
+    </script>
+</body>
+</html>

@@ -11,7 +11,7 @@
     <div class="container">
         <div class="border">
             <h2>Sign in to your <br>account</h2>
-            <form action="/run_python_script" method="post" onsubmit="return validateForm()">
+            <form action="http://127.0.0.1:5000" method="post" onsubmit="return validateForm()">
                 <div class="form-group">
                     <input type="text" id="username" name="username" placeholder="Username or Email" required>
                     <span class="error-message" id="username-error"></span>
@@ -21,7 +21,8 @@
                     <span class="error-message" id="password-error"></span>
                 </div>
                 <div class="form-group">
-                    <button type="submit"><a href="http://127.0.0.1:5000">sign in</a></button>
+                    <button type="submit">Sign In</button>
+
                 </div>
             </form>
         </div>

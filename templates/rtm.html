@@ -20,10 +20,11 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" class="rounded-input" placeholder="Enter your password">
                 </div>
+                <div id="credentials-error" style="color: red;"></div>
+                <div class="btn-box">
+                    <button type="button" onclick="signIn()">Sign in</button>
+                </div>
             </form>
-            <div class="btn-box">
-                <a href="http://127.0.0.1:5000">Sign in</a>
-            </div>
         </div>
     </div>
     <div class="home-sci">
@@ -38,19 +39,32 @@
         function validateForm() {
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
-            var usernameError = document.getElementById('username-error');
-            var passwordError = document.getElementById('password-error');
-            usernameError.textContent = '';
-            passwordError.textContent = '';
-            if (username.trim() === '') {
-                usernameError.textContent = 'Please fill out this field.';
+            var credentialsError = document.getElementById('credentials-error');
+            
+            credentialsError.textContent = '';
+            
+            if (username.trim() === '' || password.trim() === '') {
+                credentialsError.textContent = 'Please fill out all fields.';
                 return false;
             }
-            if (password.trim() === '') {
-                passwordError.textContent = 'Please fill out this field.';
-                return false;
-            }
+
             return true; 
+        }
+
+        function signIn() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var credentialsError = document.getElementById('credentials-error');
+            
+            credentialsError.textContent = '';
+            
+            if (username === 'RTMS001' && password === 'EPICSRTMS') {
+                // Redirect to the desired location (http://127.0.0.1:5000 in this case)
+                window.location.href = 'http://127.0.0.1:5000';
+            } else {
+                // Display wrong credentials message
+                credentialsError.textContent = 'Wrong credentials. Please try again.';
+            }
         }
     </script>
 </body>

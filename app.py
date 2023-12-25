@@ -12,9 +12,16 @@ def run_python_script():
     if request.method == 'POST':
         # Replace 'main.py' with the path to your Python script
         script_path = 'main.py'
-        result = subprocess.run(['python', script_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        output = result.stdout
-        return jsonify({'output': output})
+        try:
+            result = subprocess.run(['python', script_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+            output = result.stdout
+            return jsonify({'output': output})
+        except subprocess.CalledProcessError as e:
+            error_message = e.stderr
+            return jsonify({'error': error_message})
+        except Exception as e:
+            return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
     app.run(debug=True)
+

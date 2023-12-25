@@ -47,22 +47,6 @@ body {
     margin-bottom: 5px; 
 }
 
-.form-group button {
-    background-color: transparent;
-    color: #000;
-    padding: 10px;
-    border: 2px solid #00abf0;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.form-group button:hover {
-    background-color: gold;
-    color: #000;
-}
-
 h2 {
     color: #fff;
     text-align: center;
@@ -139,18 +123,20 @@ h2 {
     bottom: 0;
     width: 100%;
 }
-.btn-box a {
+
+.btn-box {
     position: relative;
+    color:transparent;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: calc(100% - 5px);
     height: 100%;
-    background: #00abf0;
+    background:transparent;
     border: 2px solid #00abf0;
     border-radius: 8px;
     font-size: 19px;
-    color: #202908;
+    color: #081b29;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
@@ -159,33 +145,35 @@ h2 {
     transition: .5s;
 }
 
-
-.btn-box a:hover{
+.btn-box:hover {
     color: #00abf0;
 }
 
-.btn-box a:nth-child(2) {
+.btn-box:nth-child(2) {
     background: transparent;
     color: #00abf0;
 }
 
-.btn-box a:nth-child(2)::before{
+.btn-box:nth-child(2)::before {
     background: #00abf0;
 }
-.btn-box a:nth-child(2):hover{
-    color: gold;
+
+.btn-box:nth-child(2):hover {
+    color: #081b29;
 }
-.btn-box a::before{
+
+.btn-box::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background: gold;
+    background: rgb(0, 0, 0);
     z-index: -1;
     transition: 0.5s;
 }
-.btn-box a:hover::before{
+
+.btn-box:hover::before {
     width: 100%;
 }
